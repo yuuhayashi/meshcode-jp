@@ -1,0 +1,129 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>haya4.tools</groupId>
+  <artifactId>haya4-jpmesh</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>haya4-jpmesh</name>
+  <packaging>jar</packaging>
+  <scm>
+    <connection>scm:git:http://surveyor.mydns.jp/gitbucket/git/haya4/haya4-jpmesh.git</connection>
+    <url>http://surveyor.mydns.jp/gitbucket/haya4/haya4-jpmesh/wiki</url>
+    <developerConnection>scm:git:http://surveyor.mydns.jp/gitbucket/git/haya4/haya4-jpmesh.git</developerConnection>
+    <tag>${version}</tag>
+  </scm>
+  
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+    </license>
+  </licenses>
+  
+  <developers>
+    <developer>
+      <name>Yuu Hayashi</name>
+      <email>hayashi.yuu@gmail.com</email>
+      <organization>surveyor</organization>
+      <organizationUrl>http://surveyor.mydns.jp/</organizationUrl>
+    </developer>
+  </developers>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+
+    <!-- dependency versions -->
+    <junit.version>4.13.1</junit.version>
+    <hamcrest.version>1.3</hamcrest.version>
+    <geotools.version>25.1</geotools.version>
+  </properties>
+
+  <!-- DEPLOY先の指定  mvn deploy -->
+  <distributionManagement>
+    <repository>
+      <id>surveyor.haya4</id>
+      <name>Internal Release Repository</name>
+      <url>http://surveyor.mydns.jp/archiva/repository/haya4/</url>
+    </repository>
+    <snapshotRepository>
+      <id>surveyor.snapshots</id>
+      <name>Archiva Managed Snapshot Repository</name>
+      <url>http://surveyor.mydns.jp/archiva/repository/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
+  <repositories>
+    <!-- org.geotools -->
+    <repository>
+      <id>osgeo</id>
+      <name>OSGeo Release Repository</name>
+      <url>https://repo.osgeo.org/repository/release/</url>
+      <snapshots><enabled>false</enabled></snapshots>
+      <releases><enabled>true</enabled></releases>
+    </repository>
+
+    <!-- org.geotools -->
+    <repository>
+      <id>osgeo-snapshot</id>
+      <name>OSGeo Snapshot Repository</name>
+      <url>https://repo.osgeo.org/repository/snapshot/</url>
+      <snapshots><enabled>true</enabled></snapshots>
+      <releases><enabled>false</enabled></releases>
+    </repository>
+  </repositories>
+  
+  <dependencies>
+    <!-- org.geotools -->
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-main</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>
+    
+    <!-- for JUnit test -->
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-core</artifactId>
+      <version>${hamcrest.version}</version>
+      <scope>test</scope>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+      <type>jar</type>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+
+      <!-- mvn site -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.7.1</version>
+        <configuration>
+          <locales>ja</locales>
+          <inputEncoding>${project.build.sourceEncoding}</inputEncoding>
+          <outputEncoding>${site.encoding}</outputEncoding>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+  
+</project>
