@@ -2,14 +2,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>haya4.tools</groupId>
   <artifactId>haya4-jpmesh</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>1.0.1</version>
   <name>haya4-jpmesh</name>
   <packaging>jar</packaging>
   <scm>
     <connection>scm:git:http://surveyor.mydns.jp/gitbucket/git/haya4/haya4-jpmesh.git</connection>
     <url>http://surveyor.mydns.jp/gitbucket/haya4/haya4-jpmesh/wiki</url>
     <developerConnection>scm:git:http://surveyor.mydns.jp/gitbucket/git/haya4/haya4-jpmesh.git</developerConnection>
-    <tag>${version}</tag>
+    <tag>haya4-jpmesh-1.0.1</tag>
   </scm>
   
   <licenses>
