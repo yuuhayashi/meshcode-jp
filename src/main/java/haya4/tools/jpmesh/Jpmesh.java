@@ -22,8 +22,8 @@ public class Jpmesh {
 				double lon2 = Double.parseDouble(str.substring(5, 6));
 				double lon3 = Double.parseDouble(str.substring(7, 8));
 
-				double lat = (((lat1 / 1.5 * 3600) + (lat2 * 5 * 60) + (lat3 * 60)) / 3600);
-				double lon = ((((lon1 + 100) * 3600) + (lon2 * 7.5 * 60) + (lon3 * 45)) / 3600);
+				double lat = (((lat1 / 1.5 * 3600) + (lat2 * 300) + (lat3 * 30)) / 3600);
+				double lon = ((((lon1 + 100) * 3600) + (lon2 * 450) + (lon3 * 45)) / 3600);
 				return new DirectPosition2D(lon, lat);
 			}
 		}
@@ -38,8 +38,8 @@ public class Jpmesh {
 	public static DirectPosition2D getCenterPosition(String str) {
 		DirectPosition2D ret = getPosition(str);
 		if (ret != null) {
-			double lat = (ret.getY() + (30d / 2 / 3600d));
-			double lon = (ret.getX() + (45d / 2 / 3600d));
+			double lat = (ret.getY() + (15.0d / 3600.0d));
+			double lon = (ret.getX() + (22.5d / 3600.0d));
 			return new DirectPosition2D(lon, lat);
 		}
 		return null;
@@ -50,7 +50,7 @@ public class Jpmesh {
 		if (ret != null) {
 			double lat = (ret.getY());
 			double lon = (ret.getX());
-			return new Rectangle2D.Double(lon, lat, (45d / 3600d), (30d / 3600d));
+			return new Rectangle2D.Double(lon, lat, 0.0125d, (30d / 3600d));
 		}
 		return null;
 	}

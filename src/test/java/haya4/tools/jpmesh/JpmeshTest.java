@@ -19,7 +19,7 @@ public class JpmeshTest {
     	
     	ret = Jpmesh.getPosition("53394526");
     	assertNotNull(ret);
-    	assertEquals(35.7d, ret.getY(), 0.000001d);
+    	assertEquals(35.683333d, ret.getY(), 0.000001d);
     	assertEquals(139.7d, ret.getX(), 0.000001d);
     }
 
@@ -27,7 +27,7 @@ public class JpmeshTest {
     public void getCenterTest() {
     	DirectPosition2D center = Jpmesh.getCenterPosition("53394526");
     	assertNotNull(center);
-    	assertEquals(35.7041666d, center.getY(), 0.000001d);
+    	assertEquals(35.6875d, center.getY(), 0.000001d);
     	assertEquals(139.70625d, center.getX(), 0.000001d);
     }
 
@@ -35,7 +35,7 @@ public class JpmeshTest {
     public void getRectangleTest() {
     	Rectangle2D rect = Jpmesh.getRectangle("53394526");
     	assertNotNull(rect);
-    	assertEquals(35.7d, rect.getY(), 0.000001d);
+    	assertEquals(35.683333d, rect.getY(), 0.000001d);
     	assertEquals(139.7d, rect.getX(), 0.000001d);
     	assertEquals(0.0083333d, rect.getHeight(), 0.000001d);
     	assertEquals(0.0125, rect.getWidth(), 0.000001d);
