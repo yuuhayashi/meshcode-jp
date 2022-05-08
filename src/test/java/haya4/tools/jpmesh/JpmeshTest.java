@@ -21,13 +21,28 @@ public class JpmeshTest {
     	assertNotNull(ret);
     	assertEquals(35.683333d, ret.getY(), 0.000001d);
     	assertEquals(139.7d, ret.getX(), 0.000001d);
+    	
+    	ret = Jpmesh.getPosition("5339452600");
+    	assertNotNull(ret);
+    	assertEquals(35.683333d, ret.getY(), 0.000001d);
+    	assertEquals(139.7d, ret.getX(), 0.000001d);
+    	
+    	ret = Jpmesh.getPosition("533945");
+    	assertNotNull(ret);
+    	assertEquals(35.666666d, ret.getY(), 0.000001d);
+    	assertEquals(139.625000d, ret.getX(), 0.000001d);
+    	
+    	ret = Jpmesh.getPosition("5339");
+    	assertNotNull(ret);
+    	assertEquals(35.333333d, ret.getY(), 0.000001d);
+    	assertEquals(139.000000d, ret.getX(), 0.000001d);
     }
 
     @Test
     public void getCenterTest() {
     	DirectPosition2D center = Jpmesh.getCenterPosition("53394526");
     	assertNotNull(center);
-    	assertEquals(35.6875d, center.getY(), 0.000001d);
+    	assertEquals(35.687500d, center.getY(), 0.000001d);
     	assertEquals(139.70625d, center.getX(), 0.000001d);
     }
 
