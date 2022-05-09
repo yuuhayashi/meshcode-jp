@@ -1,11 +1,80 @@
 package haya4.tools.jpmesh;
 
 import java.awt.geom.Rectangle2D;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 import org.geotools.geometry.DirectPosition2D;
 
 public class Jpmesh {
 
+	public static String getMesh(double lon, double lat, int level) {
+		double lon1 = lon - 100.0d;
+		double lat1 = lat * 3.0d / 2.0d;
+		if (level >= 1) {
+			String x1 = get2(lon1);
+			String y1 = get2(lat1);
+			
+			if (level >= 2) {
+				double lon2 = lon1 - Double.parseDouble(x1);
+				lon2 = lon2 * 10;
+				String x2 = get1(lon2);
+				
+				double lat2 = lat1 - Double.parseDouble(y1);
+				lat2 = lat2 * 10;
+				String y2 = get1(lat2);
+				
+				if (level >= 3) {
+					double lon3 = lon2 - Double.parseDouble(x2);
+					lon3 = lon3 * 10;
+					String x3 = get1(lon3);
+					
+					double lat3 = lat2 - Double.parseDouble(y2);
+					lat3 = lat3 * 10;
+					String y3 = get1(lat3);
+					
+					if (level >= 4) {
+						double lon4 = lon3 - Double.parseDouble(x3);
+						lon4 = lon4 * 10;
+						String x4 = get1(lon4);
+						
+						double lat4 = lat3 - Double.parseDouble(y3);
+						lat4 = lat4 * 10;
+						String y4 = get1(lat4);
+						
+						// 4次メッシュ
+						return (y1 + x1 + y2 + x2 + y3 + x3 + y4 + x4);
+					}
+					else {
+						// 3次メッシュ
+						return (y1 + x1 + y2 + x2 + y3 + x3);
+					}
+				}
+				else {
+					// 2次メッシュ
+					return (y1 + x1 + y2 + x2);
+				}
+			}
+			else {
+				// １次メッシュ
+				return (y1 + x1);
+			}
+		}
+		return null;
+	}
+	
+	private static String get2(double d) {
+		DecimalFormat s2 = new DecimalFormat("##");
+		s2.setRoundingMode(RoundingMode.DOWN);
+		return s2.format(d);
+	}
+
+	private static String get1(double d) {
+		DecimalFormat s1 = new DecimalFormat("#");
+		s1.setRoundingMode(RoundingMode.DOWN);
+		return s1.format(d);
+	}
+	
 	/**
 	 * 地域メッシュコードの位置（南西角）を取得する
 	 * @param str	地域メッシュコード（１～４次コード）

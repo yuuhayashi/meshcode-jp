@@ -8,8 +8,14 @@ import org.geotools.geometry.DirectPosition2D;
 import org.junit.Test;
 
 public class JpmeshTest {
+	@Test
+	public void getMeshTest() {
+		assertEquals("5339", Jpmesh.getMesh(139.7d, 35.683333d, 1));
+		assertEquals("533945", Jpmesh.getMesh(139.7d, 35.683333d, 2));
+		assertEquals("53394526", Jpmesh.getMesh(139.7d, 35.683333d, 3));
+	}
     
-    @Test
+	@Test
     public void getPositionTest() {
     	DirectPosition2D ret = Jpmesh.getPosition(null);
     	assertNull(ret);
