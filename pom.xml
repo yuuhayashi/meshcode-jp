@@ -2,14 +2,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>haya4.tools</groupId>
   <artifactId>meshcode-jp</artifactId>
-  <version>1.1.1-SNAPSHOT</version>
+  <version>1.1.1</version>
   <name>meshcode-jp</name>
   <packaging>jar</packaging>
   <scm>
     <connection>scm:git:https://github.com/yuuhayashi/meshcode-jp.git</connection>
     <url>https://github.com/yuuhayashi/meshcode-jp</url>
     <developerConnection>scm:git:https://github.com/yuuhayashi/meshcode-jp.git</developerConnection>
-    <tag>${version}</tag>
+    <tag>meshcode-jp-1.1.1</tag>
   </scm>
   
   <licenses>
