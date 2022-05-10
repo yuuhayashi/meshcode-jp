@@ -13,7 +13,7 @@
 
 ## See
 
-* [haya4-jpmesh wiki](http://surveyor.mydns.jp/gitbucket/haya4/meshcode-jp/wiki)
+* [meshcode-jp wiki](http://surveyor.mydns.jp/gitbucket/haya4/meshcode-jp/wiki)
 
 ## License
 
