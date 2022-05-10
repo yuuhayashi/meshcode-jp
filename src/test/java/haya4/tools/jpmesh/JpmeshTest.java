@@ -20,8 +20,15 @@ public class JpmeshTest {
     	DirectPosition2D ret = Jpmesh.getPosition(null);
     	assertNull(ret);
     	
-    	ret = Jpmesh.getPosition("53394526 ");
-    	assertNull(ret);
+    	ret = Jpmesh.getPosition("5339");
+    	assertNotNull(ret);
+    	assertEquals(35.333333d, ret.getY(), 0.000001d);
+    	assertEquals(139.000000d, ret.getX(), 0.000001d);
+    	
+    	ret = Jpmesh.getPosition("533945");
+    	assertNotNull(ret);
+    	assertEquals(35.666666d, ret.getY(), 0.000001d);
+    	assertEquals(139.625000d, ret.getX(), 0.000001d);
     	
     	ret = Jpmesh.getPosition("53394526");
     	assertNotNull(ret);
@@ -33,15 +40,8 @@ public class JpmeshTest {
     	assertEquals(35.683333d, ret.getY(), 0.000001d);
     	assertEquals(139.7d, ret.getX(), 0.000001d);
     	
-    	ret = Jpmesh.getPosition("533945");
-    	assertNotNull(ret);
-    	assertEquals(35.666666d, ret.getY(), 0.000001d);
-    	assertEquals(139.625000d, ret.getX(), 0.000001d);
-    	
-    	ret = Jpmesh.getPosition("5339");
-    	assertNotNull(ret);
-    	assertEquals(35.333333d, ret.getY(), 0.000001d);
-    	assertEquals(139.000000d, ret.getX(), 0.000001d);
+    	ret = Jpmesh.getPosition("53394526 ");
+    	assertNull(ret);
     }
 
     @Test
