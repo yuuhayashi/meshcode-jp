@@ -6,9 +6,9 @@
   <name>meshcode-jp</name>
   <packaging>jar</packaging>
   <scm>
-    <connection>scm:git:http://surveyor.mydns.jp/gitbucket/git/haya4/meshcode-jp.git</connection>
-    <url>http://surveyor.mydns.jp/gitbucket/haya4/meshcode-jp/wiki</url>
-    <developerConnection>scm:git:http://surveyor.mydns.jp/gitbucket/git/haya4/meshcode-jp.git</developerConnection>
+    <connection>scm:git:https://github.com/yuuhayashi/meshcode-jp.git</connection>
+    <url>https://github.com/yuuhayashi/meshcode-jp</url>
+    <developerConnection>scm:git:https://github.com/yuuhayashi/meshcode-jp.git</developerConnection>
     <tag>${version}</tag>
   </scm>
   
