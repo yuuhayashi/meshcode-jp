@@ -13,9 +13,9 @@
 </dependency>
 ```
 
-## See
+## API
 
-* [meshcode-jp wiki](http://surveyor.mydns.jp/gitbucket/haya4/meshcode-jp/wiki)
+* [apidocs](https://yuuhayashi.github.io/meshcode-jp/apidocs/) ... Java doc
 
 ## License
 
