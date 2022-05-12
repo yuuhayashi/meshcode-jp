@@ -2,6 +2,13 @@
 
 地域メッシュコードを扱うライブラリ
 
+
+## API
+
+[apidocs](https://yuuhayashi.github.io/meshcode-jp/apidocs/) ... Java doc
+
+## for Maven
+
 [maven用のリポジトリ](http://surveyor.mydns.jp/archiva/#artifact/haya4.tools/meshcode-jp)
 
 ```
@@ -13,12 +20,6 @@
 </dependency>
 ```
 
-## API
-
-* [apidocs](https://yuuhayashi.github.io/meshcode-jp/apidocs/) ... Java doc
-
 ## License
 
 * [MIT License](LICENSE.txt)
-
--------------------------------------------------------------------
