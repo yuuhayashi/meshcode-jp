@@ -34,10 +34,3 @@ THE SOFTWARE.
 関連し、あるいはソフトウェアの使用またはその他の扱いによって生じる一切の請求、損害、その他の義務について何
 らの責任も負わないものとします。
 
-----------------
-
-osm.jp.gpx.GeoDistance.java は'やまだらけ'様の著作物です。
-	Copyright (C) 2007-2012   やまだらけ
-	The MIT License (MIT)
-	参照元: http://yamadarake.jp/trdi/report000001.html
-	「Cords.java」を改変
