@@ -13,9 +13,24 @@ import lombok.Setter;
 public class Geojson extends JsonTemple {
 	
 	private String type = "FeatureCollection";
+	public void setType(String v) {
+		this.type = v;
+	}
 	
+	public JsonCrs getCrs() {
+		return crs;
+	}
+
+	public void setCrs(JsonCrs crs) {
+		this.crs = crs;
+	}
+
 	private JsonCrs crs;
 	
+	public List<JsonFeature> getFeatures() {
+		return features;
+	}
+
 	private List<JsonFeature> features = new ArrayList<>();
 	
 	public String toString() {

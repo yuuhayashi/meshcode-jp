@@ -32,6 +32,10 @@ public class JsonGeometryLine extends JsonTemple {
 	
 	private String type = "LineString";
 	
+	public String getType() {
+		return type;
+	}
+
 	public void setMeshcode(String code) {
 		DirectPosition2D ret = Jpmesh.getPosition(code);
 		putPoint(ret.getX(), ret.getY());

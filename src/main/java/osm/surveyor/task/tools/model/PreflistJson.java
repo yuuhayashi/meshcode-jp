@@ -28,6 +28,14 @@ public class PreflistJson extends JsonTemple {
 		return sb.toString();
 	}
 	
+	public List<JsonPref> getPreflist() {
+		return preflist;
+	}
+
+	public void setPreflist(List<JsonPref> preflist) {
+		this.preflist = preflist;
+	}
+
 	public void parse(JsonNode node) {
 		JsonNode f = node.get("preflist");
 		if (f != null) {

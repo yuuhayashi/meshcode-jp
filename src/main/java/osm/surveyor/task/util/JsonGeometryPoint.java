@@ -40,4 +40,12 @@ public class JsonGeometryPoint extends JsonTemple {
 			this.coordinates.parse(node1);
 		}
 	}
+
+	public Point getCoordinates() {
+		return coordinates;
+	}
+
+	public void setCoordinates(Point coordinates) {
+		this.coordinates = coordinates;
+	}
 }

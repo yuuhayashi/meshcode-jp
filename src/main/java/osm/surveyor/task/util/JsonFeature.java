@@ -32,6 +32,38 @@ import lombok.Setter;
 @Getter
 @Setter
 public class JsonFeature extends JsonTemple {
+	public JsonGeometryPoint getGeometryPoint() {
+		return geometryPoint;
+	}
+
+	public void setGeometryPoint(JsonGeometryPoint geometryPoint) {
+		this.geometryPoint = geometryPoint;
+	}
+
+	public JsonGeometryLine getGeometryLine() {
+		return geometryLine;
+	}
+
+	public void setGeometryLine(JsonGeometryLine geometryLine) {
+		this.geometryLine = geometryLine;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public JsonProperties getProperties() {
+		return properties;
+	}
+
+	public void setProperties(JsonProperties properties) {
+		this.properties = properties;
+	}
+
 	private JsonGeometryPoint geometryPoint;
 	private JsonGeometryLine geometryLine;
 	

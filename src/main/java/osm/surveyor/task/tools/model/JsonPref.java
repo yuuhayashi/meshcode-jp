@@ -18,8 +18,32 @@ public class JsonPref extends JsonTemple {
 	
 	private String prefname;
 	
+	public int getPrefcode() {
+		return prefcode;
+	}
+
+	public Point getPoint() {
+		return point;
+	}
+
+	public void setPoint(Point point) {
+		this.point = point;
+	}
+
+	public void setPrefcode(int prefcode) {
+		this.prefcode = prefcode;
+	}
+
 	private Point point;
 	
+	public String getPrefname() {
+		return prefname;
+	}
+
+	public void setPrefname(String prefname) {
+		this.prefname = prefname;
+	}
+
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		boolean c = false;

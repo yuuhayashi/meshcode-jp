@@ -26,10 +26,31 @@ import osm.surveyor.task.util.JsonTemple;
 public class MeshlistJson extends JsonTemple {
 	
 	private Long prefcode;
+	public void setPrefcode(Long prefcode) {
+		this.prefcode = prefcode;
+	}
+
+	public void setPrefname(String prefname) {
+		this.prefname = prefname;
+	}
+
+	public void setMeshlist(List<JsonMesh> meshlist) {
+		this.meshlist = meshlist;
+	}
+
+	public Long getPrefcode() {
+		return this.prefcode;
+	}
 	
 	private String prefname;
+	public String getPrefname() {
+		return this.prefname;
+	}
 	
 	private List<JsonMesh> meshlist = new ArrayList<>();
+	public List<JsonMesh> getMeshlist() {
+		return this.meshlist;
+	}
 	
 	public String toString() {
 		StringBuffer sb = new StringBuffer();

@@ -21,8 +21,17 @@ public class Point extends JsonNumberArray {
 		this.lng = str;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void setLng(double d) {
 		setLng(new BigDecimal(d).setScale(5, BigDecimal.ROUND_HALF_UP));
+	}
+
+	public String getLng() {
+		return lng;
+	}
+
+	public String getLat() {
+		return lat;
 	}
 
 	public void setLng(BigDecimal dec) {
@@ -33,6 +42,7 @@ public class Point extends JsonNumberArray {
 		this.lat = str;
 	}
 
+	@SuppressWarnings("deprecation")
 	public void setLat(double d) {
 		setLat(new BigDecimal(d).setScale(6, BigDecimal.ROUND_HALF_UP));
 	}

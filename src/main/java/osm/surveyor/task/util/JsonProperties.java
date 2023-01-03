@@ -14,14 +14,64 @@ public class JsonProperties extends JsonTemple {
 	 *	}
 	 */
 	private String name;
+	public void setName(String str ) {
+		this.name = str;
+	}
+	
+	public void setCitycode(Long citycode) {
+		this.citycode = citycode;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	private String path;
 	private String id;
 	private String version;
+	
 	private Long prefcode;
+	public long getPrefcode() {
+		return this.prefcode.longValue();
+	}
+	public void setPrefcode(long code) {
+		this.prefcode = Long.valueOf(code);
+	}
+	
 	private String prefname;
+	public String getPrefname() {
+		return this.prefname;
+	}
+	public void setPrefname(String v) {
+		this.prefname = v;
+	}
+	
+	public void setMeshcode(Long meshcode) {
+		this.meshcode = meshcode;
+	}
+
+	public void setCityname(String cityname) {
+		this.cityname = cityname;
+	}
+
 	private Long citycode;
+	public long getCitycode() {
+		return this.citycode.longValue();
+	}
+	
 	private String cityname;
+	public String getCityname() {
+		return this.cityname;
+	}
+	
 	private Long meshcode;
+	public long getMeshcode() {
+		return this.meshcode.longValue();
+	}
 	
 	public String toString() {
 		StringBuffer sb = new StringBuffer();

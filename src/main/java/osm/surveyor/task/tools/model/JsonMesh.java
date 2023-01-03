@@ -19,6 +19,30 @@ public class JsonMesh extends JsonTemple {
 	
 	private Long meshcode;
 	
+	public Long getCitycode() {
+		return citycode;
+	}
+
+	public void setCitycode(Long citycode) {
+		this.citycode = citycode;
+	}
+
+	public String getCityname() {
+		return cityname;
+	}
+
+	public void setCityname(String cityname) {
+		this.cityname = cityname;
+	}
+
+	public Long getMeshcode() {
+		return meshcode;
+	}
+
+	public void setMeshcode(Long meshcode) {
+		this.meshcode = meshcode;
+	}
+
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		boolean c = false;

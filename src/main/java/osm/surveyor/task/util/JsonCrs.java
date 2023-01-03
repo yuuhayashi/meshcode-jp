@@ -18,7 +18,11 @@ import lombok.Setter;
 public class JsonCrs extends JsonTemple {
 	
 	private String type = "name";
+	
 	private JsonProperties properties;
+	public void setProperties(JsonProperties prop) {
+		this.properties = prop;
+	}
 	
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
@@ -38,5 +42,9 @@ public class JsonCrs extends JsonTemple {
 			this.properties = new JsonProperties();
 			this.properties.parse(node1);
 		}
+	}
+	
+	public void setType(String type) {
+		this.type = type;
 	}
 }
