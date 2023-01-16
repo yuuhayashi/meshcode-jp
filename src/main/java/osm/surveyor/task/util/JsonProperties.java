@@ -35,8 +35,8 @@ public class JsonProperties extends JsonTemple {
 	private String version;
 	
 	private Long prefcode;
-	public long getPrefcode() {
-		return this.prefcode.longValue();
+	public Long getPrefcode() {
+		return this.prefcode;
 	}
 	public void setPrefcode(long code) {
 		this.prefcode = Long.valueOf(code);
@@ -59,8 +59,8 @@ public class JsonProperties extends JsonTemple {
 	}
 
 	private Long citycode;
-	public long getCitycode() {
-		return this.citycode.longValue();
+	public Long getCitycode() {
+		return this.citycode;
 	}
 	
 	private String cityname;
@@ -69,8 +69,8 @@ public class JsonProperties extends JsonTemple {
 	}
 	
 	private Long meshcode;
-	public long getMeshcode() {
-		return this.meshcode.longValue();
+	public Long getMeshcode() {
+		return this.meshcode;
 	}
 	
 	public String toString() {
